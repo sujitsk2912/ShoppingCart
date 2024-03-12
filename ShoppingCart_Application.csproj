@@ -1,0 +1,416 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D39FDFCC-0FBE-4B72-B1E3-ADB7E125BD3A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShoppingCart_Application</RootNamespace>
+    <AssemblyName>ShoppingCart_Application</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Razorpay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Razorpay.3.1.0\lib\net47\Razorpay.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="20%25off.png" />
+    <Content Include="BeautySection.aspx" />
+    <Content Include="Beauty_bg\bg1.png" />
+    <Content Include="Beauty_bg\bg2.png" />
+    <Content Include="Beauty_bg\bg3.png" />
+    <Content Include="Beauty_bg\bg4.png" />
+    <Content Include="Beauty_bg\bg5.jpg" />
+    <Content Include="Beauty_bg\bg6.jpg" />
+    <Content Include="Beauty_bg\bg7.png" />
+    <Content Include="bg.jpg" />
+    <Content Include="bg_top.png" />
+    <Content Include="CartSection.aspx" />
+    <Content Include="Css\StyleSheet.css" />
+    <Content Include="Electronics_bg\EL3.gif" />
+    <Content Include="Electronics_bg\EL4.gif" />
+    <Content Include="Electronics_bg\EL5.jpg" />
+    <Content Include="Electronics_bg\EL6.jpg" />
+    <Content Include="Electronics_bg\EL7.jpg" />
+    <Content Include="Electronics_bg\EL8.gif" />
+    <Content Include="SearchProducts.aspx" />
+    <Content Include="footer_bg.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Home&amp;Leaving_bg\HL1.gif" />
+    <Content Include="Home&amp;Leaving_bg\HL2.jpg" />
+    <Content Include="Home&amp;Leaving_bg\HL3.jpg" />
+    <Content Include="Home&amp;Leaving_bg\HL4.jpg" />
+    <Content Include="Home&amp;Leaving_bg\HL5.jpg" />
+    <Content Include="HomeLeavingSection.aspx" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="Home_bg\20%25off.png" />
+    <Content Include="Home_bg\bg1.jpg" />
+    <Content Include="Home_bg\bg2.jpg" />
+    <Content Include="Home_bg\bg3.jpg" />
+    <Content Include="Home_bg\bg4.jpg" />
+    <Content Include="Home_bg\bg5.jpg" />
+    <Content Include="Home&amp;Leaving_bg\bg.png" />
+    <Content Include="Product_Images\antiaging_cream_image1.jpg" />
+    <Content Include="Product_Images\bedside_table_image1.jpg" />
+    <Content Include="Product_Images\Bluetooth_Speaker.jpg" />
+    <Content Include="Product_Images\Bluetooth_Speaker1.jpg" />
+    <Content Include="Product_Images\body_lotion_image1.jpg" />
+    <Content Include="Product_Images\bookshelf_image1.jpg" />
+    <Content Include="Product_Images\camera.jpg" />
+    <Content Include="Product_Images\Camera1.jpg" />
+    <Content Include="Product_Images\cleanser_image1.jpg" />
+    <Content Include="Product_Images\coffee_maker.jpg" />
+    <Content Include="Product_Images\curling_wand_image1.jpg" />
+    <Content Include="Product_Images\curtain_image1.jpg" />
+    <Content Include="Product_Images\desk_chair.jpg" />
+    <Content Include="Product_Images\desk_image1.jpg" />
+    <Content Include="Product_Images\dining_set_image1.jpg" />
+    <Content Include="Product_Images\dresser_image1.jpg" />
+    <Content Include="Product_Images\External_Hard_Drive.jpg" />
+    <Content Include="Product_Images\External_Hard_Drive1.jpg" />
+    <Content Include="Product_Images\eyelash_extensions_kit_image1.jpg" />
+    <Content Include="Product_Images\eyeshadow_palette_image1.jpg" />
+    <Content Include="Product_Images\facial_mask_image1.jpg" />
+    <Content Include="Product_Images\facial_serum_image1.jpg" />
+    <Content Include="Product_Images\fitness_tracker.jpg" />
+    <Content Include="Product_Images\Fitness_Tracker1.jpg" />
+    <Content Include="Product_Images\Gaming_Console.jpg" />
+    <Content Include="Product_Images\Gaming_Console1.jpg" />
+    <Content Include="Product_Images\gaming_mouse.jpg" />
+    <Content Include="Product_Images\hair_straightener_image1.jpg" />
+    <Content Include="Product_Images\headphones.jpg" />
+    <Content Include="Product_Images\Headphones1.jpg" />
+    <Content Include="Product_Images\highlighter_palette_image1.jpg" />
+    <Content Include="Product_Images\indoor_plants_image1.jpg" />
+    <Content Include="Product_Images\kitchen_appliances_image1.jpg" />
+    <Content Include="Product_Images\laptop.jpg" />
+    <Content Include="Product_Images\Laptop1.jpg" />
+    <Content Include="Product_Images\lipstick_set_image1.jpg" />
+    <Content Include="Product_Images\makeup_brush_set_image1.jpg" />
+    <Content Include="Product_Images\nail_polish_image1.jpg" />
+    <Content Include="Product_Images\patio_furniture_image1.jpg" />
+    <Content Include="Product_Images\perfume_image1.jpg" />
+    <Content Include="Product_Images\pillows_image1.jpg" />
+    <Content Include="Product_Images\Power_Bank.jpg" />
+    <Content Include="Product_Images\Power_Bank1.jpg" />
+    <Content Include="Product_Images\Printer.jpg" />
+    <Content Include="Product_Images\Printer1.jpg" />
+    <Content Include="Product_Images\security_camera_image1.jpg" />
+    <Content Include="Product_Images\shoes.jpg" />
+    <Content Include="Product_Images\smartphone.jpg" />
+    <Content Include="Product_Images\Smartphone1.jpg" />
+    <Content Include="Product_Images\Smartwatch.jpg" />
+    <Content Include="Product_Images\Smartwatch1.jpg" />
+    <Content Include="Product_Images\Smart_Bulb.jpg" />
+    <Content Include="Product_Images\Smart_Bulb1.jpg" />
+    <Content Include="Product_Images\sofa_image1.jpg" />
+    <Content Include="Product_Images\sunscreen_image1.jpg" />
+    <Content Include="Product_Images\tablet.jpg" />
+    <Content Include="KidsSection.aspx" />
+    <Content Include="Kids_bg\kbg1.png" />
+    <Content Include="Kids_bg\kbg10.gif" />
+    <Content Include="Kids_bg\kbg2.png" />
+    <Content Include="Kids_bg\kbg3.png" />
+    <Content Include="Kids_bg\kbg4.png" />
+    <Content Include="Kids_bg\kbg5.png" />
+    <Content Include="Kids_bg\kbg6.png" />
+    <Content Include="Kids_bg\kbg7.jpg" />
+    <Content Include="Kids_bg\kbg8.png" />
+    <Content Include="Kids_bg\kbg9.png" />
+    <Content Include="Product_Images\animalpuzzle_image1.jpg" />
+    <Content Include="Product_Images\blocks_image1.jpg" />
+    <Content Include="Product_Images\boat_image1.jpg" />
+    <Content Include="Product_Images\car_image1.jpg" />
+    <Content Include="Product_Images\dino_image1.jpg" />
+    <Content Include="Product_Images\dress_image1.jpg" />
+    <Content Include="Product_Images\fashionwatch_image1.jpg" />
+    <Content Include="Product_Images\hoop_image1.jpg" />
+    <Content Include="Product_Images\jeans_image1.jpg" />
+    <Content Include="Product_Images\laptop_image1.jpg" />
+    <Content Include="Product_Images\playdough_image1.jpg" />
+    <Content Include="Product_Images\sportswatch_image1.jpg" />
+    <Content Include="Product_Images\Tablet1.jpg" />
+    <Content Include="Product_Images\towel_set_image1.jpg" />
+    <Content Include="Product_Images\tshirt_image1.jpg" />
+    <Content Include="Product_Images\unicorn_image1.jpg" />
+    <Content Include="Product_Images\vacuum_cleaner_image1.jpg" />
+    <Content Include="Product_Images\VR_Headset.jpg" />
+    <Content Include="Product_Images\VR_Headset1.jpg" />
+    <Content Include="Product_Images\wall_art_image1.jpg" />
+    <Content Include="Product_Images\watch_image1.jpg" />
+    <Content Include="Main_Content\heart.png" />
+    <Content Include="Main_Content\log-in-circle-solid-24.png" />
+    <Content Include="Main_Content\myntra-logo.png" />
+    <Content Include="Main_Content\search.png" />
+    <Content Include="Main_Content\shopping-bag.png" />
+    <Content Include="Main_Content\user.png" />
+    <Content Include="MenSection.aspx" />
+    <Content Include="Mens_bg\mbg1.png" />
+    <Content Include="Mens_bg\mbg2.png" />
+    <Content Include="Mens_bg\mbg4.jpg" />
+    <Content Include="Mens_bg\mbg5.png" />
+    <Content Include="Mens_bg\mbg6.jpg" />
+    <Content Include="Mens_bg\mbg7.png" />
+    <Content Include="Mens_bg\rewards-banner_2.jpg" />
+    <Content Include="Product_Images\backpack1.jpg" />
+    <Content Include="Product_Images\belt1.jpg" />
+    <Content Include="Product_Images\blazer1.jpg" />
+    <Content Include="Product_Images\chinos1.jpg" />
+    <Content Include="Product_Images\dressshirt1.jpg" />
+    <Content Include="Product_Images\hat1.jpg" />
+    <Content Include="Product_Images\hoodie1.jpg" />
+    <Content Include="Product_Images\joggers1.jpg" />
+    <Content Include="Product_Images\leatherjacket1.jpg" />
+    <Content Include="Product_Images\polo1.jpg" />
+    <Content Include="Product_Images\shorts1.jpg" />
+    <Content Include="Product_Images\sunglasses1.jpg" />
+    <Content Include="Product_Images\sweater1.jpg" />
+    <Content Include="Product_Images\tie1.jpg" />
+    <Content Include="Product_Images\watch1.jpg" />
+    <Content Include="ProductDetails.aspx" />
+    <Content Include="Product_Images\Wireless_Mouse.jpg" />
+    <Content Include="Product_Images\Wireless_Mouse1.jpg" />
+    <Content Include="ProfileSection.aspx" />
+    <Content Include="ElectronicsSection.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WishlistSection.aspx" />
+    <Content Include="WomenSection.aspx" />
+    <Content Include="Womens_bg\rewards-banner_2.jpg" />
+    <Content Include="Womens_bg\wbg1.png" />
+    <Content Include="Womens_bg\wbg2.png" />
+    <Content Include="Womens_bg\wbg3.png" />
+    <Content Include="Womens_bg\wbg4.png" />
+    <Content Include="Womens_bg\wbg5.png" />
+    <Content Include="Womens_bg\wbg6.png" />
+    <Content Include="Womens_bg\wbg7.png" />
+    <Content Include="Product_Images\anarkalisuit.jpg" />
+    <Content Include="Product_Images\dupatta.jpg" />
+    <Content Include="Product_Images\earrings.jpg" />
+    <Content Include="Product_Images\earrings2.jpg" />
+    <Content Include="Product_Images\jumpsuit.jpg" />
+    <Content Include="Product_Images\kurti.jpg" />
+    <Content Include="Product_Images\kurti2.jpg" />
+    <Content Include="Product_Images\lehenga.jpg" />
+    <Content Include="Product_Images\lehenga2.jpg" />
+    <Content Include="Product_Images\necklaceset.jpg" />
+    <Content Include="Product_Images\palazzopants.jpg" />
+    <Content Include="Product_Images\salwarsuit.jpg" />
+    <Content Include="Product_Images\salwarsuit2.jpg" />
+    <Content Include="Product_Images\saree.jpg" />
+    <Content Include="Product_Images\saree2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeautySection.aspx.cs">
+      <DependentUpon>BeautySection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeautySection.aspx.designer.cs">
+      <DependentUpon>BeautySection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartSection.aspx.cs">
+      <DependentUpon>CartSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartSection.aspx.designer.cs">
+      <DependentUpon>CartSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProducts.aspx.cs">
+      <DependentUpon>SearchProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchProducts.aspx.designer.cs">
+      <DependentUpon>SearchProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLeavingSection.aspx.cs">
+      <DependentUpon>HomeLeavingSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeLeavingSection.aspx.designer.cs">
+      <DependentUpon>HomeLeavingSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KidsSection.aspx.cs">
+      <DependentUpon>KidsSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KidsSection.aspx.designer.cs">
+      <DependentUpon>KidsSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenSection.aspx.cs">
+      <DependentUpon>MenSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenSection.aspx.designer.cs">
+      <DependentUpon>MenSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileSection.aspx.cs">
+      <DependentUpon>ProfileSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileSection.aspx.designer.cs">
+      <DependentUpon>ProfileSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ElectronicsSection.aspx.cs">
+      <DependentUpon>ElectronicsSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElectronicsSection.aspx.designer.cs">
+      <DependentUpon>ElectronicsSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RazorpayClient.cs" />
+    <Compile Include="WishlistSection.aspx.cs">
+      <DependentUpon>WishlistSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WishlistSection.aspx.designer.cs">
+      <DependentUpon>WishlistSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WomenSection.aspx.cs">
+      <DependentUpon>WomenSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WomenSection.aspx.designer.cs">
+      <DependentUpon>WomenSection.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Main.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55125</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55125/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

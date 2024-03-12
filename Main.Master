@@ -1,0 +1,275 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.Master.cs" Inherits="ShoppingCart_Application.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+
+    <style type="text/css">
+
+       
+        .newStyle3 {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        }
+        .auto-style19 {
+            width: 122px;
+            height: 70px;
+            text-align: center;
+        }
+        .auto-style10 {
+            width: 101px;
+            height: 70px;
+            text-align: center;
+        }
+        .auto-style21 {
+            width: 110px;
+            height: 70px;
+            text-align: center;
+        }
+        .auto-style22 {
+            width: 189px;
+            height: 70px;
+            text-align: center;
+        }
+
+        .auto-style13 {
+            width: 88px;
+            padding:10px;
+            height: 70px;
+            text-align: center;
+        }
+        
+        .auto-style28 {
+            height: 70px;
+            width: 39px;
+        }
+        
+        .newStyle4 {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .auto-style35 {
+            width: 127px;
+            height: 70px;
+            text-align: center;
+        }
+        .auto-style36 {
+            width: 128px;
+            height: 70px;
+            text-align: center;
+        }
+        .auto-style38 {
+            width: 96px;
+            height: 70px;
+            text-align: center;
+        }
+       
+        .auto-style41 {
+            width: 592px;
+            height: 70px;
+        }
+      
+        .auto-style42 {
+            width: 90%;
+            height: 34px;
+        }
+        .auto-style43 {
+            width: auto;
+    
+        }
+
+        </style>
+
+    <script type="text/javascript">
+        function handleEnterKeyPress(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                performSearch();
+            }
+        }
+
+    function performSearch() {
+        var searchValue = document.getElementById('<%= Search.ClientID %>').value.trim();
+        window.location.href = 'SearchProducts.aspx?Search=' + encodeURIComponent(searchValue);
+    }
+    </script> 
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    </head>
+<body>
+
+    <form id="form1" runat="server">
+    
+        <nav style="padding:10px; background-color:#ffffffcf; box-shadow: 2px 2px 2px 2px #00000010">
+            
+            <table class="newStyle3" style="margin:10px">
+                <tr>
+                    <td class="auto-style19">
+                        <strong>
+                        <asp:ImageButton ID="ImageButton1" runat="server" CssClass="auto-style40" Height="44px" ImageUrl="~/Main_Content/myntra-logo.png" Width="66px" PostBackUrl="~/HomePage.aspx" />
+                        </strong>
+                    </td>
+                    <td class="auto-style10"><strong>
+                        <asp:HyperLink ID="HyperLinkMen" runat="server" CssClass="auto-style39" NavigateUrl="~/MenSection.aspx" BorderStyle="None">MEN</asp:HyperLink>
+                        </strong></td>
+                    <td class="auto-style21"><strong>
+                        <asp:HyperLink ID="HyperLinkWomen" runat="server" CssClass="auto-style39" NavigateUrl="~/WomenSection.aspx" BorderStyle="None">WOMEN</asp:HyperLink>
+                        </strong></td>
+                    <td class="auto-style10"><strong>
+                        <asp:HyperLink ID="HyperLinkKids" runat="server" CssClass="auto-style39" NavigateUrl="~/KidsSection.aspx" BorderStyle="None">KIDS</asp:HyperLink>
+                        </strong></td>
+                    <td class="auto-style22"><strong>
+                        <asp:HyperLink ID="HyperLinkHomeLeaving" runat="server" CssClass="auto-style39" NavigateUrl="~/HomeLeavingSection.aspx" BorderStyle="None">HOME &amp; LEAVING</asp:HyperLink>
+                        </strong> </td>
+                    <td class="auto-style35"><strong>
+                        <asp:HyperLink ID="HyperLinkBeauty" runat="server" CssClass="auto-style39" NavigateUrl="~/BeautySection.aspx" BorderStyle="None">BEAUTY</asp:HyperLink>
+                        </strong></td>
+                    <td class="auto-style36"><strong>
+                        <asp:HyperLink ID="HyperLinkStudio" runat="server" CssClass="auto-style39" NavigateUrl="~/ElectronicsSection.aspx" BorderStyle="None">ELECTRONICS</asp:HyperLink></strong></td>
+                   <td class="auto-style41">
+                      <div style="display:flex; justify-content:center" class="auto-style43">
+              
+                          <asp:TextBox ID="Search" runat="server" placeholder="Search for products, brands and more"
+                style="display:flex; justify-content:center; border:1px solid grey; color:black; margin: 0 0 0 20px; padding:0 10px 0 20px; font-size:14px; border-radius:20px"
+                class="auto-style42" ClientIDMode="Static" onkeydown="return handleEnterKeyPress(event)" />
+
+</div>
+
+                    </td>
+
+                    <td class="auto-style13">
+                        <strong>
+                        <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Main_Content/user.png" Width="30px" />
+                        <br />
+                        <asp:HyperLink ID="HyperLinkProfile" runat="server" CssClass="auto-style39" NavigateUrl="~/ProfileSection.aspx" BorderStyle="None">profile</asp:HyperLink>
+                        </strong></td>
+                    <td class="auto-style13">
+                        <strong>
+                        <asp:Image ID="Image1" runat="server" Height="30px" ImageUrl="~/Main_Content/shopping-bag.png" Width="30px" />
+                        <br />
+                        <asp:HyperLink ID="HyperLinkCart" runat="server" CssClass="auto-style39" NavigateUrl="~/CartSection.aspx" BorderStyle="None">cart</asp:HyperLink>
+                        </strong></td>
+                     <td class="auto-style38">
+                         <strong>
+                         <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/Main_Content/log-in-circle-solid-24.png" Width="30px" />
+                         <br />
+                         <asp:HyperLink ID="HyperLinkLogin" runat="server" CssClass="auto-style39" NavigateUrl="~/LoginSection.aspx" BorderStyle="None">login</asp:HyperLink>
+                         </strong>
+                     </td>
+                    <td class="auto-style28"></td>
+                </tr>
+            </table>
+            
+        </nav>
+
+        <br /><br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            <h2>this is what</h2>
+
+        </asp:ContentPlaceHolder>
+
+
+    </form>
+
+    <!-- Footer Section -->
+
+       <footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo">Myntra</h1>
+        
+    <h2>Contact</h2>
+    
+    <address>
+      5534 Somewhere In. The World 22193-10212<br>
+          
+      <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+    </address>
+  </div>
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title">Media</h2>
+
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Online</a>
+        </li>
+
+        <li>
+          <a href="#">Print</a>
+        </li>
+            
+        <li>
+          <a href="#">Alternative Ads</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item nav__item--extra">
+      <h2 class="nav__title">Technology</h2>
+      
+      <ul class="nav__ul nav__ul--extra">
+        <li>
+          <a href="#">Hardware Design</a>
+        </li>
+        
+        <li>
+          <a href="#">Software Design</a>
+        </li>
+        
+        <li>
+          <a href="#">Digital Signage</a>
+        </li>
+        
+        <li>
+          <a href="#">Automation</a>
+        </li>
+        
+        <li>
+          <a href="#">Artificial Intelligence</a>
+        </li>
+        
+        <li>
+          <a href="#">IoT</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item">
+      <h2 class="nav__title">Legal</h2>
+      
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        
+        <li>
+          <a href="#">Terms of Use</a>
+        </li>
+        
+        <li>
+          <a href="#">Sitemap</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="legal">
+    <p>&copy; 2024 Myntra. All rights reserved.</p>
+    
+    <div class="legal__links">
+      <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
